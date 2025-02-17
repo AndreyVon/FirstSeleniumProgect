@@ -28,11 +28,14 @@ public class FindElementsTest {
         // поиск по тегу
         WebElement element = driver.findElement(By.tagName("h2"));
         System.out.println(element.getText()); // поиск одно элемента
-        
+
 
         List<WebElement> a = driver.findElements(By.tagName("a"));
         System.out.println(a.size()); // поиск всех элементов
     }
+
+
+
 
     @AfterMethod
     public void tearDown(){
