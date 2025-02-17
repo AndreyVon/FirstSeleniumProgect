@@ -34,6 +34,35 @@ public class FindElementsTest {
         System.out.println(a.size()); // поиск всех элементов
     }
 
+    @Test
+    public void findElementLocators(){
+        //tag name = tag name
+        //id
+        //driver.findElement(By.id("Купить"));
+
+        //class name
+        driver.findElement(By.className("styles-module-footer-brg1O"));
+
+        //name By.name("user");
+
+        //link text
+        driver.findElements(By.linkText("Карьера в Авито"));
+
+    }
+
+    //css selector
+
+    @Test
+    public void findElementByCssSelector(){
+        //id -> #id
+        //driver.findElements(By.cssSelector("#id"));
+        // class name -> .className
+        driver.findElements(By.cssSelector(".styles-module-input-rA1dB"));
+        //[name = 'user']
+        driver.findElements(By.cssSelector("[data-marker='service-autoteka/title']"));
+    }
+    //xPath
+
 
 
 
