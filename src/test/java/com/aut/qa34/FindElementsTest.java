@@ -61,7 +61,25 @@ public class FindElementsTest {
         //[name = 'user']
         driver.findElements(By.cssSelector("[data-marker='service-autoteka/title']"));
     }
-    //xPath
+    //xPath //tag[@attr = 'value']
+
+    @Test
+    public void findElementBtXpath(){
+        //tag name = //tag
+        driver.findElements(By.xpath("//h1"));
+        //id -> //tag[@id='city']
+        //driver.findElement(By.id("city"));
+        driver.findElements(By.xpath("//*[id = 'city']"));
+        //class name -> //tag[@class= 'className'];
+        driver.findElement(By.xpath("//*[@class= 'input-container']"));
+
+        //text
+        driver.findElements(By.xpath("//li[text()='© ООО «КЕХ еКоммерц» 2007–2025. ']"));
+        driver.findElements(By.xpath("//li[.='© ООО «КЕХ еКоммерц» 2007–2025. ']"));
+        driver.findElements(By.xpath("//span[contains(.,'2007-2025')]"));
+    }
+
+
 
 
 
